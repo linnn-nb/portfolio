@@ -269,6 +269,32 @@
     .vthumb:hover .vplay { opacity:1; transform:scale(1); }
     .vplay svg { margin-left:3px; }
 
+    /* ─── VIDEO LIGHTBOX ─── */
+    .vlightbox {
+      position:fixed; inset:0; z-index:1000;
+      background:rgba(0,0,0,.92);
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none;
+      transition:opacity .25s;
+    }
+    .vlightbox.open { opacity:1; pointer-events:all; }
+    .vlightbox-inner {
+      position:relative;
+      width:min(90vw,1280px);
+    }
+    .vlightbox-inner video {
+      width:100%; max-height:85vh;
+      display:block; border-radius:12px;
+    }
+    .vlightbox-close {
+      position:absolute; top:-44px; right:0;
+      background:none; border:none; cursor:pointer;
+      color:rgba(255,255,255,.6); font-size:26px; line-height:1;
+      padding:4px 8px;
+      transition:color .15s;
+    }
+    .vlightbox-close:hover { color:#fff; }
+
     .vbadge {
       position:absolute; top:12px; left:12px;
       font-size:var(--t-micro); font-weight:700; letter-spacing:.1em; text-transform:uppercase;
@@ -679,6 +705,13 @@
   <span>寻找游戏音频实习中</span>
 </footer>
 
+<div class="vlightbox" id="vlightbox">
+  <div class="vlightbox-inner">
+    <button class="vlightbox-close" onclick="closeLightbox()">✕</button>
+    <video id="vlightbox-video" controls></video>
+  </div>
+</div>
+
 <script>
   // ── Waveform bars ──
   const BAR_HEIGHTS = [20,35,55,40,70,50,80,45,65,30,75,55,85,40,60,28,72,52,42,68,82,36,58,72,46,62,78,32,50,66,44,76,38,54,70];
@@ -691,12 +724,31 @@
     });
   });
 
-  // ── Video play ──
+  // ── Video lightbox ──
   function playVideo(btn) {
-    const video = btn.closest('.vthumb').querySelector('video');
-    if (!video) return;
-    video.paused ? video.play() : video.pause();
+    const thumbVideo = btn.closest('.vthumb').querySelector('video');
+    if (!thumbVideo) return;
+    const lb      = document.getElementById('vlightbox');
+    const lbVideo = document.getElementById('vlightbox-video');
+    lbVideo.src   = thumbVideo.currentSrc || thumbVideo.src;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbVideo.play();
   }
+
+  function closeLightbox() {
+    const lb      = document.getElementById('vlightbox');
+    const lbVideo = document.getElementById('vlightbox-video');
+    lb.classList.remove('open');
+    lbVideo.pause();
+    lbVideo.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('vlightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
   // ── Audio toggle (one at a time) ──
   let currentAudio = null;
