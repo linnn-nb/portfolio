@@ -348,10 +348,12 @@
     .awave-bar {
       flex: 1; max-width: 4px; border-radius: 2px;
       background: var(--line-hi); transition: background .2s;
+      pointer-events: none;
     }
     .ac:hover .awave-bar { background: var(--accent-bd); }
     .aplay-btn {
       position: absolute;
+      z-index: 1;
       width: 44px; height: 44px; border-radius: 50%;
       background: var(--s3); border: 1px solid var(--line-hi);
       cursor: pointer; display: flex; align-items: center; justify-content: center;
