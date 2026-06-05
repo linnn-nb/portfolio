@@ -742,9 +742,10 @@
     const lb      = document.getElementById('vlightbox');
     const lbVideo = document.getElementById('vlightbox-video');
     lbVideo.src   = thumbVideo.currentSrc || thumbVideo.src;
+    lbVideo.load();
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
-    lbVideo.play();
+    lbVideo.play().catch(() => {});
   }
 
   function closeLightbox() {
@@ -772,9 +773,12 @@
       if (currentBtn) setPause(currentBtn);
     }
     if (audio.paused) {
-      audio.play(); setPlay(btn);
-      currentAudio = audio; currentBtn = btn;
-      audio.onended = () => { setPause(btn); currentAudio = null; currentBtn = null; };
+      audio.load();
+      audio.play().then(() => {
+        setPlay(btn);
+        currentAudio = audio; currentBtn = btn;
+        audio.onended = () => { setPause(btn); currentAudio = null; currentBtn = null; };
+      }).catch(() => { setPause(btn); });
     } else {
       audio.pause(); setPause(btn);
       currentAudio = null; currentBtn = null;
