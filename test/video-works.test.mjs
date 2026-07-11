@@ -26,7 +26,8 @@ test('作品卡片使用封面图并按点击加载视频', () => {
 
 test('求职入口和移动端播放提示清晰', () => {
   assert.equal((page.match(/下载游戏音频简历/g) ?? []).length, 2);
-  assert.equal((page.match(/href="胡锦霖 星海音乐学院 音频实习生 27届毕业生\.docx"/g) ?? []).length, 2);
+  assert.equal((page.match(/href="胡锦霖 星海音乐学院 游戏音频实习生 27届毕业生\.docx"/g) ?? []).length, 2);
+  assert.doesNotMatch(page, /href="胡锦霖 星海音乐学院 音频实习生 27届毕业生\.docx"/);
   assert.doesNotMatch(page, /href="胡锦霖简历\.docx"/);
   assert.match(page, /点击封面播放。/);
   assert.match(page, /@media \(hover: none\) \{\s*\.vplay \{ opacity:1; transform:scale\(1\); \}/);
