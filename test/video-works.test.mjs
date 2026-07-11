@@ -32,3 +32,10 @@ test('求职入口和移动端播放提示清晰', () => {
   assert.match(page, /点击封面播放。/);
   assert.match(page, /@media \(hover: none\) \{\s*\.vplay \{ opacity:1; transform:scale\(1\); \}/);
 });
+
+test('爆牌魔女卡片提供音频设计文档下载', () => {
+  const dessertedCard = section.slice(section.indexOf('<!-- V1: Desserted -->'), section.indexOf('<!-- V2: Chinese-style game PV -->'));
+
+  assert.match(dessertedCard, /class="doc-dl" href="爆牌甜心_音频设计文档_v1\.0\.docx" download/);
+  assert.match(dessertedCard, /音频设计文档/);
+});
