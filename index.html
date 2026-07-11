@@ -242,8 +242,10 @@
       aspect-ratio: 16 / 9;
       position: relative; background: var(--s2);
       overflow: hidden; cursor: pointer; flex-shrink: 0;
+      width:100%; padding:0; border:0; appearance:none; text-align:left;
     }
-    .vthumb video { width:100%; height:100%; object-fit:cover; display:block; }
+    .vthumb:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    .vthumb img { width:100%; height:100%; object-fit:cover; display:block; }
     .vthumb-empty {
       width:100%; height:100%;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -268,6 +270,7 @@
     }
     .vthumb:hover .vplay { opacity:1; transform:scale(1); }
     .vplay svg { margin-left:3px; }
+    @media (hover: none) { .vplay { opacity:1; transform:scale(1); } }
 
     /* ─── VIDEO LIGHTBOX ─── */
     .vlightbox {
@@ -432,7 +435,7 @@
     <a href="#audio-works">音频</a>
     <a href="#contact">联系</a>
   </div>
-  <a href="胡锦霖简历.docx" download class="nav-pill">下载简历</a>
+  <a href="胡锦霖 星海音乐学院 音频实习生 27届毕业生.docx" download class="nav-pill">下载游戏音频简历</a>
   <a href="mailto:3455273790@qq.com" class="nav-pill">联系我</a>
 </nav>
 
@@ -540,32 +543,52 @@
   <div class="section-inner">
     <div class="sec-kicker">Video Works</div>
     <h2 class="sec-title">视频作品</h2>
-    <p class="works-sub">悬停缩略图后点击播放键查看演示。</p>
+    <p class="works-sub">点击封面播放。</p>
 
     <div class="vgrid">
 
-      <!-- V1: Wwise -->
+      <!-- V1: Desserted -->
       <div class="vc">
-        <div class="vthumb">
-          <video src="video/Unity集成Wwise FPS模版.mp4" preload="metadata"></video>
+        <button type="button" class="vthumb" data-video="video/爆牌魔女_实机演示_web.mp4" onclick="playVideo(this)" aria-label="播放爆牌魔女实机音频系统演示">
+          <img src="video/posters/desserted.jpg" alt="爆牌魔女实机音频系统演示画面" loading="lazy">
           <span class="vbadge">Game Audio</span>
-          <div class="voverlay">
-            <button class="vplay" onclick="playVideo(this)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg>
-            </button>
-          </div>
+          <div class="voverlay"><span class="vplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg></span></div>
+        </button>
+        <div class="vinfo">
+          <div class="vtype">Game Audio · Wwise + Unity</div>
+          <h3 class="vtitle">爆牌魔女 · 实机音频系统</h3>
+          <p class="vdesc">基于 Unity 与 Wwise 完成的游戏音频系统实机演示，展示工程运行、事件触发与调试过程。</p>
+          <div class="vtools"><span class="vtool hi">Wwise</span><span class="vtool hi">Unity</span><span class="vtool hi">Profiler</span></div>
         </div>
+      </div>
+
+      <!-- V2: Chinese-style game PV -->
+      <div class="vc">
+        <button type="button" class="vthumb" data-video="video/国风游戏PV音效配乐_web.mp4" onclick="playVideo(this)" aria-label="播放国风游戏PV音效与配乐演示">
+          <img src="video/posters/guofeng-pv.jpg" alt="国风游戏PV音效与配乐画面" loading="lazy">
+          <span class="vbadge">Sound Design</span>
+          <div class="voverlay"><span class="vplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg></span></div>
+        </button>
+        <div class="vinfo">
+          <div class="vtype">Game PV · Music + Sound Design</div>
+          <h3 class="vtitle">国风游戏 PV · 音效与配乐</h3>
+          <p class="vdesc">基于国风游戏宣传片素材完成的音效与配乐练习，围绕画面节奏与氛围推进构建声音表达。</p>
+          <div class="vtools"><span class="vtool">Sound Design</span><span class="vtool">Music</span><span class="vtool">Game PV</span></div>
+        </div>
+      </div>
+
+      <!-- V3: Wwise -->
+      <div class="vc">
+        <button type="button" class="vthumb" data-video="video/Unity集成Wwise FPS模版.mp4" onclick="playVideo(this)" aria-label="播放FPS游戏完整音频系统演示">
+          <img src="video/posters/fps-wwise.jpg" alt="FPS游戏完整音频系统演示画面" loading="lazy">
+          <span class="vbadge">Game Audio</span>
+          <div class="voverlay"><span class="vplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg></span></div>
+        </button>
         <div class="vinfo">
           <div class="vtype">Game Audio · Wwise</div>
           <h3 class="vtitle">FPS 游戏完整音频系统</h3>
           <p class="vdesc">基于 Wwise 实现的 FPS 游戏音频方案。State Machine 驱动动态战斗音乐、RTPC 心跳音效、地面材质脚步声 Switch，在 Unity 中完整集成并经 Profiler 验证。</p>
-          <div class="vtools">
-            <span class="vtool hi">Wwise</span>
-            <span class="vtool hi">Unity</span>
-            <span class="vtool hi">RTPC</span>
-            <span class="vtool">State Machine</span>
-            <span class="vtool">Switch</span>
-          </div>
+          <div class="vtools"><span class="vtool hi">Wwise</span><span class="vtool hi">Unity</span><span class="vtool hi">RTPC</span><span class="vtool">State Machine</span><span class="vtool">Switch</span></div>
           <a class="doc-dl" href="Unity_Wwise_音频设计文档.pdf" download>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             音频设计文档
@@ -573,49 +596,33 @@
         </div>
       </div>
 
-      <!-- V2: Mixing -->
+      <!-- V4: Mixing -->
       <div class="vc">
-        <div class="vthumb">
-          <video src="video/三角洲CG_web.mp4" preload="metadata"></video>
+        <button type="button" class="vthumb" data-video="video/三角洲CG_web.mp4" onclick="playVideo(this)" aria-label="播放三角洲行动赛季CG配乐与音效演示">
+          <img src="video/posters/delta-cg.jpg" alt="三角洲行动赛季CG配乐与音效画面" loading="lazy">
           <span class="vbadge">Mixing</span>
-          <div class="voverlay">
-            <button class="vplay" onclick="playVideo(this)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg>
-            </button>
-          </div>
-        </div>
+          <div class="voverlay"><span class="vplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg></span></div>
+        </button>
         <div class="vinfo">
           <div class="vtype">Game CG · Music + Sound Design</div>
           <h3 class="vtitle">三角洲行动 · 赛季 CG 配乐与音效</h3>
           <p class="vdesc">以三角洲行动赛季宣传 CG 为素材进行的配乐与音效练习。音乐层面构建张力递进的战场氛围，音效层面精细还原机械、爆破与环境细节，声画同步贯穿全片。</p>
-          <div class="vtools">
-            <span class="vtool">Logic Pro</span>
-            <span class="vtool">Pro Tools</span>
-            <span class="vtool">Waves</span>
-          </div>
+          <div class="vtools"><span class="vtool">Logic Pro</span><span class="vtool">Pro Tools</span><span class="vtool">Waves</span></div>
         </div>
       </div>
 
-      <!-- V3: AIGC -->
+      <!-- V5: Rain city -->
       <div class="vc">
-        <div class="vthumb">
-          <video src="video/雨之城_web.mp4" preload="metadata"></video>
+        <button type="button" class="vthumb" data-video="video/雨之城_web.mp4" onclick="playVideo(this)" aria-label="播放雨之城实机演示声音设计">
+          <img src="video/posters/rain-city.jpg" alt="雨之城实机演示声音设计画面" loading="lazy">
           <span class="vbadge">Production</span>
-          <div class="voverlay">
-            <button class="vplay" onclick="playVideo(this)">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg>
-            </button>
-          </div>
-        </div>
+          <div class="voverlay"><span class="vplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="#000"><polygon points="5,3 19,12 5,21"/></svg></span></div>
+        </button>
         <div class="vinfo">
           <div class="vtype">Game Audio · Sound Design</div>
           <h3 class="vtitle">雨之城 · 实机演示声音设计</h3>
           <p class="vdesc">基于雨之城实机画面完成的游戏声音设计练习。针对城市雨天场景，设计并实现环境层、动作层与界面层的完整音效体系，涵盖雨声分层、脚步材质、UI 反馈等细节，力求声音与画面情绪高度贴合。</p>
-          <div class="vtools">
-            <span class="vtool">Pro Tools</span>
-            <span class="vtool">Wwise</span>
-            <span class="vtool">iZotope RX</span>
-          </div>
+          <div class="vtools"><span class="vtool">Pro Tools</span><span class="vtool">Wwise</span><span class="vtool">iZotope RX</span></div>
         </div>
       </div>
 
@@ -705,9 +712,9 @@
     <div class="contact-btns">
       <a href="mailto:3455273790@qq.com" class="btn-white">3455273790@qq.com</a>
       <a href="tel:18529108491" class="btn-dark">18529108491</a>
-      <a href="胡锦霖简历.docx" download class="btn-dark" style="display:inline-flex;align-items:center;gap:7px;">
+      <a href="胡锦霖 星海音乐学院 音频实习生 27届毕业生.docx" download class="btn-dark" style="display:inline-flex;align-items:center;gap:7px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        下载简历
+        下载游戏音频简历
       </a>
     </div>
   </div>
@@ -721,7 +728,7 @@
 <div class="vlightbox" id="vlightbox">
   <div class="vlightbox-inner">
     <button class="vlightbox-close" onclick="closeLightbox()">✕</button>
-    <video id="vlightbox-video" controls></video>
+    <video id="vlightbox-video" controls preload="metadata" playsinline></video>
   </div>
 </div>
 
@@ -739,11 +746,11 @@
 
   // ── Video lightbox ──
   function playVideo(btn) {
-    const thumbVideo = btn.closest('.vthumb').querySelector('video');
-    if (!thumbVideo) return;
+    const videoSrc = btn.closest('.vthumb').dataset.video;
+    if (!videoSrc) return;
     const lb      = document.getElementById('vlightbox');
     const lbVideo = document.getElementById('vlightbox-video');
-    lbVideo.src   = thumbVideo.currentSrc || thumbVideo.src;
+    lbVideo.src   = videoSrc;
     lbVideo.load();
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -755,7 +762,8 @@
     const lbVideo = document.getElementById('vlightbox-video');
     lb.classList.remove('open');
     lbVideo.pause();
-    lbVideo.src = '';
+    lbVideo.removeAttribute('src');
+    lbVideo.load();
     document.body.style.overflow = '';
   }
 
