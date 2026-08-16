@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const page = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const section = page.slice(page.indexOf('<section class="section" id="video-works">'), page.indexOf('<!-- ─── AUDIO WORKS ─── -->'));
@@ -25,8 +25,11 @@ test('作品卡片使用封面图并按点击加载视频', () => {
 });
 
 test('求职入口和移动端播放提示清晰', () => {
-  assert.equal((page.match(/下载实习版简历/g) ?? []).length, 2);
-  assert.equal((page.match(/href="胡锦霖 星海音乐学院 游戏音频实习生 27届毕业生\.docx"/g) ?? []).length, 2);
+  assert.equal((page.match(/下载秋招简历/g) ?? []).length, 2);
+  assert.equal((page.match(/href="胡锦霖 星海音乐学院 简历\.docx"/g) ?? []).length, 2);
+  assert.ok(existsSync(new URL('../胡锦霖 星海音乐学院 简历.docx', import.meta.url)), '缺少秋招简历下载文件');
+  assert.doesNotMatch(page, /下载实习版简历/);
+  assert.doesNotMatch(page, /href="胡锦霖 星海音乐学院 游戏音频实习生 27届毕业生\.docx"/);
   assert.doesNotMatch(page, /href="胡锦霖 星海音乐学院 音频实习生 27届毕业生\.docx"/);
   assert.doesNotMatch(page, /href="胡锦霖简历\.docx"/);
   assert.match(page, /点击封面播放。/);
