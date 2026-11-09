@@ -1,0 +1,26 @@
+paper-tail.json / Selected values from revision 03-paper-tail
+Source path shown as filename only.
+
+{
+  "revision": "03-paper-tail",
+  "paperSourceInSeconds": 0.17,
+  "paperSourceOutSeconds": 0.53,
+  "paperGainDb": -8,
+  "paperFadeInSeconds": 0.02,
+  "paperFadeOutSeconds": 0.07,
+  "paperExponentialDecayDb": 9,
+  "sampleRate": 48000,
+  "subtype": "PCM_24",
+  "maxVoices": 2,
+  "sourceFilename": "PaperTearRip_SFXB.3130.wav",
+  "takes": [
+    {
+      "variant": 1,
+      "tailStartSeconds": 0.25
+    },
+    {
+      "variant": 2,
+      "tailStartSeconds": 0.29
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="219" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 219" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="219"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-219)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="500" height="219" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,96%,93%); fill-rule: evenodd;"/>
+			<text x="20" y="189" style="font-family: Helvetica-Bold; font-size: 21px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,378) scale(1,-1)">Same footstep, two rendering paths</text>
+			<text x="20" y="169" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,338) scale(1,-1)">stepRoad  /  Tokyo_HRTF_Footsteps</text>
+			<rect x="20" y="61" width="223" height="89" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,88%,89%); fill-rule: evenodd;"/>
+			<text x="32" y="125" style="font-family: Helvetica-Bold; font-size: 16px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,250) scale(1,-1)">0  /  Steam Audio</text>
+			<text x="32" y="101" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,202) scale(1,-1)">Spatializer active</text>
+			<text x="32" y="80" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,160) scale(1,-1)">Wwise 3D panning blend 0%</text>
+			<rect x="257" y="61" width="223" height="89" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,90%,84%); fill-rule: evenodd;"/>
+			<text x="269" y="125" style="font-family: Helvetica-Bold; font-size: 16px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,250) scale(1,-1)">100  /  Wwise stereo</text>
+			<text x="269" y="101" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,202) scale(1,-1)">Spatializer bypassed</text>
+			<text x="269" y="80" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,160) scale(1,-1)">Wwise 3D panning blend 100%</text>
+			<path d="M 20,45 L 480,45 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="20" y="25" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,50) scale(1,-1)">Shared in both modes</text>
+			<text x="20" y="8" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,16) scale(1,-1)">Same event and Wwise distance curve</text>
+		</g>
+	</g>
+</svg>

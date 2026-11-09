@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="222" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 222" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="222"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-222)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="500" height="222" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,96%,93%); fill-rule: evenodd;"/>
+			<text x="20" y="192" style="font-family: Helvetica-Bold; font-size: 21px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,384) scale(1,-1)">Distance stays in Wwise</text>
+			<text x="20" y="172" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,344) scale(1,-1)">Tokyo_LocalWorld  /  authored dry-volume points</text>
+			<path d="M 69,144 L 461,144 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="50.328" y="140.0" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,280) scale(1,-1)">0</text>
+			<path d="M 69,110.4 L 461,110.4 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="39.66" y="106.4" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,212) scale(1,-1)">-20</text>
+			<path d="M 69,76.8 L 461,76.8 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="39.66" y="72.80000000000001" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,145) scale(1,-1)">-40</text>
+			<path d="M 69,43.2 L 461,43.2 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="39.66" y="39.19999999999999" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,78) scale(1,-1)">-60</text>
+			<text x="25" y="154" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,308) scale(1,-1)">dB</text>
+			<path d="M 69,144 L 87.092308,144 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 87.092308,144 L 117.246154,135.6 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 117.246154,135.6 L 177.553846,122.16 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 177.553846,122.16 L 280.076923,98.64 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 280.076923,98.64 L 461,43.2 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="69.0" cy="144.0" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<circle cx="87.09230769230768" cy="144.0" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<circle cx="117.24615384615385" cy="135.6" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<circle cx="177.55384615384617" cy="122.16" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<circle cx="280.0769230769231" cy="98.64" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<circle cx="461.0" cy="43.19999999999999" r="3.4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(58%,15%,25%); fill-rule: evenodd;"/>
+			<text x="65.664" y="21" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,42) scale(1,-1)">0</text>
+			<text x="113.91015384615385" y="21" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,42) scale(1,-1)">8</text>
+			<text x="170.88184615384617" y="21" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,42) scale(1,-1)">18</text>
+			<text x="273.40492307692307" y="21" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,42) scale(1,-1)">35</text>
+			<text x="454.328" y="21" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,42) scale(1,-1)">65</text>
+			<text x="354.025" y="5" style="font-family: Helvetica; font-size: 11px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,10) scale(1,-1)">Distance (game units)</text>
+		</g>
+	</g>
+</svg>

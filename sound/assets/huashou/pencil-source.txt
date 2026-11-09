@@ -1,0 +1,18 @@
+HuashouPencilAudio.cs
+Actual source excerpt; gaps marked by ...
+
+112  void Apply(Stroke s, bool moving, float speed, bool turn, float strength)
+113  {
+114      if (!moving || Time.timeScale <= 0 || !focused) { StopAudio(s); return; }
+115      if (!Prepare()) return;
+     ...
+121      s.speed = speed;
+122      AkUnitySoundEngine.SetRTPCValue("Pen_Speed", speed * 100, s.emitter, s.active ? 25 : 0);
+123      if (!s.active)
+124      {
+125          AkUnitySoundEngine.SetRTPCValue("Pen_Turn", 0, s.emitter, 0);
+126          s.loop = AkUnitySoundEngine.PostEvent("Play_Pencil_Loop", s.emitter);
+     ...
+132      if (turn)
+133      {
+134          uint id = AkUnitySoundEngine.PostEvent("Play_Pencil_Turn", s.emitter);

@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><script>if(new URLSearchParams(location.search).has("audio-check")){document.write('<script src="./audio-check.js"><\/script>')}</script>
+<script src="./coi-serviceworker.js"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Wake Up Tokyo · Demo v0.3.75</title><meta name="description" content="A third-person action roguelite. Awaken Tokyo, rally your allies, and break the Order.">  <script type="module" crossorigin src="./assets/main-BI6HwyEo.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three.module-RMxtKkjj.js">
+  <link rel="modulepreload" crossorigin href="./assets/mixamo-DqlhCaVJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/world-CDUViZcW.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-DGbP5lHh.css">
+</head><body>
+<canvas id="game" tabindex="-1"></canvas><div id="worldLabels"></div>
+<div id="hud" hidden>
+ <div id="alertVignette" aria-hidden="true" hidden></div>
+ <section class="playerPanel panel"><div class="eyebrow"><span class="purpleDot"></span> PATIENT ZERO <span id="hpText">100 / 100</span></div><div class="bar hp"><i id="hpTrail" aria-hidden="true"></i><i id="hpBar"></i></div><span id="playerHit" aria-hidden="true"></span><div class="bar stamina"><i id="staminaBar"></i></div><small id="potionStatus" hidden></small><small id="kindlingStatus" hidden></small><div class="counters"><span>Allies Alive <b id="team">0</b></span><span>Total Infected <b id="total">0</b></span></div></section>
+ <section class="alertPanel panel"><div class="eyebrow">CITY THREAT <span>THREAT</span></div><div class="alertReading"><b id="alertValue">0</b><span id="alertName">Unaware</span></div><div id="alertLevels" aria-hidden="true"><b>I</b><b>II</b><b>III</b><b>IV</b><b>V</b></div><p id="reinforcement">Next stage · 10</p></section>
+ <div id="runTimer" aria-label="Time Survived"><span id="clock">00:00</span></div><nav id="abilityRack" aria-label="Acquired Abilities"><div id="abilitySlots"></div></nav>
+ <section id="cityMap" class="mapPanel panel" aria-label="Minimap"><div class="eyebrow"><span id="mapName">TOKYO / RIVERSIDE</span> <span>N ↑</span></div><button id="mapClose" hidden aria-label="Close City Map">Close · Tab / Esc</button><canvas id="map" width="400" height="320"></canvas><div class="mapLegend"><span><i class="ally"></i>Allies</span><span><i class="enemy"></i>Enemies</span><span><i class="site"></i>Weakening Sites</span></div></section>
+ <div id="infectionFeedback"></div><aside id="infectionFeed" aria-live="polite"></aside><div id="runCountdown" hidden><small>Suppression Countdown</small><b>02:00</b></div><div id="missionComplete"></div><div id="policeAlert" role="status" aria-live="assertive"></div><button id="endAftermath" hidden>End Run</button><section id="bossHud" class="panel" hidden><div class="eyebrow">ORDER COLOSSUS <span id="bossValue">6000 / 6000</span></div><div class="bar"><i id="bossHp"></i></div><small id="bossPhase"></small><p id="bossWarning"></p></section><div id="crosshair" aria-label="Crosshair"><svg id="chargeRings" viewBox="0 0 100 100" aria-hidden="true" hidden><g class="chargeTrack"><circle cx="50" cy="50" r="21"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="39"/></g><g class="chargeFill"><circle cx="50" cy="50" r="21" pathLength="1"/><circle cx="50" cy="50" r="30" pathLength="1"/><circle cx="50" cy="50" r="39" pathLength="1"/></g></svg><span class="aimRing"></span><i class="aimDot"></i><span class="hitMark" aria-hidden="true">×</span><small id="chargeStatus" hidden></small></div><div id="targetHint"></div><div id="reloadIndicator">RELOADING <b></b><i></i></div><div id="toast"></div><div id="hurtVignette"></div>
+ <nav class="hudTools" aria-label="Game Controls"><button id="controlHelp" title="View Controls">? Controls</button><button id="sound" aria-label="Toggle Game Audio">♫ Audio On</button></nav>
+ <section class="xpPanel panel"><div class="levelBadge">LV<b id="level">1</b></div><div><div class="eyebrow">MUTATION XP <span id="xpText">0 / 4</span></div><div class="bar"><i id="xpBar"></i></div><small id="upgradeHint">Level up to choose a mutation</small></div></section>
+ <section class="objectivePanel panel"><div id="objectiveFeedback" role="status" aria-live="polite" hidden></div><div class="eyebrow"><span id="taskNumber">NO OBJECTIVE</span><span id="percent">0%</span></div><strong id="objective">Await Suppression</strong><small id="objectiveSub">Three weakening sites appear at 500 Threat.</small><div id="objectiveSteps"></div><div id="objectiveDistance"></div><div class="weaponHeading"><b id="primaryLabel">Unarmed</b><small>Wheel / numbers to equip · R reload</small></div><div id="ammo"></div></section>
+ <button id="pauseButton" aria-label="Pause Game">Ⅱ</button><div id="damageVignette"></div>
+</div>
+<div id="menu">
+ <div class="menuShade"></div><div class="menuGrid"></div><div class="menuNoise"></div>
+ <svg class="menuGraffiti" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="sprayDots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="currentColor"/></pattern></defs><path class="sprayCloud" d="M-30 18 510 0 400 260 0 330Z" fill="url(#sprayDots)"/><g class="sprayRed" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="12" d="m1115 75 46 20-31 39 59-13-5 49 32-40 43 21-23-44 34-26-51 1-13-45-17 44Z"/><path stroke-width="5" d="m1090 73-26-12m61-23-9-24m154 133 21 20m-80 2 4 24"/><path stroke-width="9" d="m-25 745 206-32-120 39 212-20"/></g><g class="sprayWhite" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="m1028 236 82-29-25 27 63-8m-97 18 54-9"/><path d="m1284 728 19-18 14 22-21-4 8-20"/></g><g class="sprayPurple" fill="currentColor"><circle cx="1350" cy="782" r="10"/><circle cx="1328" cy="765" r="4"/><circle cx="1375" cy="748" r="6"/><circle cx="1324" cy="804" r="3"/><path d="m1362 774 11 61-6 17-4-5Z"/></g></svg>
+ <header class="gameLogo" aria-label="Wake Up Tokyo"><span>Wake up</span><strong>TOKYO<span>!</span></strong></header>
+ <main class="menuContent mainMenuNav">
+  <label class="mapChoice" for="mapSelect"><span>MAP</span><select id="mapSelect"><option value="tidewater">Tidewater Plaza</option><option value="riverside">Tokyo Cyber District</option></select></label>
+  <button id="start" class="primary" disabled><span>Loading Tokyo…</span><i>↵</i></button>
+  <button id="continue" hidden></button>
+  <button id="settings">Settings</button>
+  <button id="about">How to Play</button>
+  <div class="menuStatus"><span class="liveDot"></span><p id="loading">Preparing the city</p></div>
+ </main>
+ <aside class="menuIntel">
+  <div class="intelHeader"><span>CITY AWAKENING</span><strong id="menuProgress">0.0%</strong></div>
+  <dl><div><dt>Infected</dt><dd id="menuInfected">0</dd></div><div><dt>Awakened</dt><dd id="menuAwakened">0</dd></div><div><dt>District</dt><dd id="regionName">Riverside</dd></div></dl>
+  <div class="menuMap" aria-label="Tokyo District Map"><span class="mapRoad roadA"></span><span class="mapRoad roadB"></span><span class="mapRoad roadC"></span><i></i><b>N</b></div>
+ </aside>
+ <div class="menuFooter"><span>Navigate <kbd>Tab</kbd></span><span>Select <kbd>↵</kbd></span><b>WAKE UP TOKYO / Demo v0.3.75</b></div>
+</div>
+
+<aside id="tuneHud" hidden></aside>
+<div id="levelUpFx" hidden><strong class="levelUpWord">LEVEL UP!</strong></div>
+<div id="modal" hidden><div id="dialog" class="dialog"></div></div></body></html>

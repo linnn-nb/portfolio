@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="209" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 209" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="209"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-209)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="500" height="209" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,96%,93%); fill-rule: evenodd;"/>
+			<text x="20" y="179" style="font-family: Helvetica-Bold; font-size: 21px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,358) scale(1,-1)">One event hands over the groove</text>
+			<text x="20" y="159" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,318) scale(1,-1)">Music_Street issues Play and Stop actions together.</text>
+			<text x="20" y="114" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,228) scale(1,-1)">Street</text>
+			<text x="20" y="72" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,144) scale(1,-1)">Prior phase</text>
+			<rect x="122.0" y="107" width="336.0" height="24" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,88%,89%); fill-rule: evenodd;"/>
+			<rect x="122.0" y="65" width="312.0" height="24" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,90%,84%); fill-rule: evenodd;"/>
+			<text x="364.632" y="114" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,228) scale(1,-1)">0.70 s fade-in</text>
+			<text x="331.974" y="72" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(58%,25%,18%); stroke:none;" transform="translate(0,144) scale(1,-1)">0.65 s fade-out</text>
+			<path d="M 122,137 L 122,56 Z" style="stroke: rgb(58%,15%,25%); stroke-linecap: butt; stroke-width: 1.25;"/>
+			<text x="122.0" y="39" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,78) scale(1,-1)">Event posted</text>
+			<text x="20" y="15" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,30) scale(1,-1)">The Stop actions fade out any of seven other active phases.</text>
+		</g>
+	</g>
+</svg>

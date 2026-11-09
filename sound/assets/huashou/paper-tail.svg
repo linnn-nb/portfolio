@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="228" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 228" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="228"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-228)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="500" height="228" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,96%,93%); fill-rule: evenodd;"/>
+			<text x="20" y="198" style="font-family: Helvetica-Bold; font-size: 21px;fill: rgb(58%,25%,18%); stroke:none;" transform="translate(0,396) scale(1,-1)">The strike lands before the tear</text>
+			<text x="20" y="178" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,356) scale(1,-1)">Two attack edits share one 360 ms paper slice.</text>
+			<path d="M 97,154 L 97,52 Z" style="stroke: rgb(58%,25%,18%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<text x="103.0" y="145" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(58%,25%,18%); stroke:none;" transform="translate(0,290) scale(1,-1)">Sweep onset</text>
+			<text x="20" y="111" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,222) scale(1,-1)">Variant 1</text>
+			<path d="M 97,117 L 464,117 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="228.07142857142858" y="107" width="188.7428571428571" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,90%,84%); fill-rule: evenodd;"/>
+			<rect x="228.07142857142858" y="107" width="10.485714285714266" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,64%,54%); fill-rule: evenodd;"/>
+			<rect x="380.1142857142857" y="107" width="36.69999999999999" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,64%,54%); fill-rule: evenodd;"/>
+			<text x="285.9453571428572" y="112" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(58%,25%,18%); stroke:none;" transform="translate(0,224) scale(1,-1)">250–610 ms</text>
+			<text x="20" y="71" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,142) scale(1,-1)">Variant 2</text>
+			<path d="M 97,77 L 464,77 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="249.04285714285714" y="67" width="188.74285714285713" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,90%,84%); fill-rule: evenodd;"/>
+			<rect x="249.04285714285714" y="67" width="10.485714285714323" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,64%,54%); fill-rule: evenodd;"/>
+			<rect x="401.0857142857143" y="67" width="36.69999999999999" height="19" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(78%,64%,54%); fill-rule: evenodd;"/>
+			<text x="306.9167857142857" y="72" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(58%,25%,18%); stroke:none;" transform="translate(0,144) scale(1,-1)">290–650 ms</text>
+			<text x="83.99799999999999" y="34" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,68) scale(1,-1)">0 ms</text>
+			<text x="20" y="13" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,26) scale(1,-1)">Paper layer</text>
+			<text x="115" y="13" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,26) scale(1,-1)">20 ms fade-in  /  70 ms fade-out  /  -8 dB source gain</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,22 @@
+Wwise/Huashou/Containers/Pencil.wwu
+Loop Volume RTPC / Selected XML lines; gaps marked by ...
+
+171  <ObjectRef Name="Pen_Turn" ID="{69A20861-25F7-4F4D-A6D2-BB31C0EE7516}" WorkUnitID="{581F6A97-2755-4E75-96D3-F30415A2B1CD}"/>
+     ...
+179  <PointList>
+180    <Point>
+181      <XPos>0</XPos>
+182      <YPos>0</YPos>
+         ...
+184    </Point>
+185    <Point>
+186      <XPos>50</XPos>
+187      <YPos>-5</YPos>
+         ...
+189    </Point>
+190    <Point>
+191      <XPos>100</XPos>
+192      <YPos>-12</YPos>
+         ...
+194    </Point>
+195  </PointList>

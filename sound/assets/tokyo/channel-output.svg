@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="222" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 222" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="222"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-222)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="500" height="222" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,96%,93%); fill-rule: evenodd;"/>
+			<text x="20" y="192" style="font-family: Helvetica-Bold; font-size: 21px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,384) scale(1,-1)">What changed in the render</text>
+			<text x="20" y="172" style="font-family: Helvetica; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,344) scale(1,-1)">Captured road footsteps straight ahead and behind</text>
+			<text x="20" y="141" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,282) scale(1,-1)">Source</text>
+			<text x="157" y="141" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(23%,34%,39%); stroke:none;" transform="translate(0,282) scale(1,-1)">Wwise stereo</text>
+			<text x="328" y="141" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,282) scale(1,-1)">Steam Audio</text>
+			<path d="M 20,128 L 480,128 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="20" y="101" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,202) scale(1,-1)">Front</text>
+			<text x="157" y="101" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(23%,34%,39%); stroke:none;" transform="translate(0,202) scale(1,-1)">L = R</text>
+			<text x="328" y="101" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,202) scale(1,-1)">L and R differ</text>
+			<path d="M 20,82 L 480,82 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="20" y="55" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(14%,14%,13%); stroke:none;" transform="translate(0,110) scale(1,-1)">Rear</text>
+			<text x="157" y="55" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(23%,34%,39%); stroke:none;" transform="translate(0,110) scale(1,-1)">L = R</text>
+			<text x="328" y="55" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(58%,15%,25%); stroke:none;" transform="translate(0,110) scale(1,-1)">L and R differ</text>
+			<path d="M 20,36 L 480,36 Z" style="stroke: rgb(84%,81%,76%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="20" y="15" style="font-family: Helvetica; font-size: 12px;fill: rgb(33%,32%,30%); stroke:none;" transform="translate(0,30) scale(1,-1)">Channel comparison of the capture. Perceived direction can vary.</text>
+		</g>
+	</g>
+</svg>
