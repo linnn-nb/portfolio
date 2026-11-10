@@ -1,5 +1,6 @@
 {
   "version": "0.3.75",
+  "buildRevision": "perf-20261110.1",
   "stage": "demo",
   "title": "Wake Up Tokyo",
   "label": "Demo v0.3.75"
