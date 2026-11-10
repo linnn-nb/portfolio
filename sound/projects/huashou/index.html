@@ -26,12 +26,115 @@
   </header>
   <main id="main"><article class="project story-project shell case-huashou">
  <header class="project-intro"><a class="back-link" href="../../index.html#work">← Selected work</a><div class="project-heading"><div><p class="eyebrow">01 / 2.5D tower defence</p><h1>Hua Shou</h1><p class="project-deck">Draw patrol routes, summon creatures and defend a paper castle in a 2.5D tower defence game.</p></div><dl class="project-facts"><div><dt>My work</dt><dd>Sound design · Sample editing · Unity / Wwise</dd></div><div><dt>Engine</dt><dd>Unity · Wwise</dd></div><div><dt>Project</dt><dd>Team game · 2026</dd></div></dl></div></header>
- <nav class="case-nav"><a href="#watch">Gameplay</a><a href="#sound">Sound design</a><a href="audio/index.html">Audio implementation &amp; Wwise ↗</a><a href="#play">Play / download</a><a href="#credits">Credits</a></nav>
- <section class="demo-panel page-section" id="watch" aria-label="Gameplay with game audio"><div class="section-heading"><h2 class="eyebrow">Gameplay with game audio</h2><span class="section-count">02:28</span></div>
- <div class="media-layout story-media"><div class="media-main"><video class="gameplay-video" id="gameplay-player" controls playsinline preload="metadata" poster="../../assets/huashou/storybook.webp" aria-label="Gameplay with game audio"><source src="../../assets/huashou/gameplay.mp4" type="video/mp4"></video>
- <div class="demo-caption"><span>Gameplay with game audio</span><a class="text-link" href="../../assets/huashou/gameplay.mp4" target="_blank" rel="noopener">Open video ↗</a></div></div>
- <aside class="sound-chapters"><h3>Listening index</h3><ol><li><button type="button" data-seek="5" data-player="gameplay-player"><time>00:05</time><span>Open the sketchbook</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="29" data-player="gameplay-player"><time>00:29</time><span>Feel the line</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="55" data-player="gameplay-player"><time>00:55</time><span>Bring it to life</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="73" data-player="gameplay-player"><time>01:13</time><span>Hear paper in the fight</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="124" data-player="gameplay-player"><time>02:04</time><span>A moment to breathe</span><span class="chapter-play">↗</span></button></li></ol></aside></div></section>
- <section class="project-reading page-section" id="sound"><div class="section-label"><h2>Sound design</h2></div><div class="project-copy"><p>I selected and edited the pencil and combat sounds, implemented the drawing controls in Unity and Wwise, and balanced them against music and combat feedback.</p><ul class="concrete-points"><li><h3>00:29 · Drawing</h3><p>The friction loop follows movement. A turn adds a short accent; pausing the hand stops the loop.</p></li><li><h3>01:13 · Attacks</h3><p>A sweep leads the strike. A delayed paper tear adds texture to its release.</p></li><li><h3>02:04 · Wave complete</h3><p>The game returns to preparation music after the first combat wave.</p></li></ul><a class="technical-entry" href="audio/index.html"><span class="eyebrow">Process demonstration</span><h3>Pencil loop, turn accents and paper attacks ↗</h3><p>Watch the loop-and-turn demonstration, then inspect the Unity controls, Wwise envelope and paper-tail edit.</p></a></div></section>
+ <nav class="case-nav"><a href="#watch">Gameplay</a><a href="#sound">Sound design</a><a href="#audio-implementation">Audio implementation &amp; Wwise</a><a href="#play">Play / download</a><a href="#credits">Credits</a></nav>
+ <section class="demo-panel page-section" id="watch" aria-label="Gameplay with game audio"><div class="section-heading"><h2 class="eyebrow">Gameplay with game audio</h2><span class="section-count">02:24</span></div>
+ <div class="media-layout story-media"><div class="media-main"><video class="gameplay-video" id="gameplay-player" controls playsinline preload="metadata" poster="../../assets/huashou/storybook.webp" aria-label="Gameplay with game audio"><source src="../../assets/huashou/gameplay-clean-start.mp4" type="video/mp4"></video>
+ <div class="demo-caption"><span>Gameplay with game audio</span><a class="text-link" href="../../assets/huashou/gameplay-clean-start.mp4" target="_blank" rel="noopener">Open video ↗</a></div></div>
+ <aside class="sound-chapters"><h3>Listening index</h3><ol><li><button type="button" data-seek="1" data-player="gameplay-player"><time>00:01</time><span>Open the sketchbook</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="25" data-player="gameplay-player"><time>00:25</time><span>Feel the line</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="51" data-player="gameplay-player"><time>00:51</time><span>Bring it to life</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="69" data-player="gameplay-player"><time>01:09</time><span>Hear paper in the fight</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="120" data-player="gameplay-player"><time>02:00</time><span>A moment to breathe</span><span class="chapter-play">↗</span></button></li></ol></aside></div></section>
+ <section class="project-reading page-section" id="sound"><div class="section-label"><h2>Sound design</h2></div><div class="project-copy"><p>I selected and edited the pencil and combat sounds, implemented the drawing controls in Unity and Wwise, and balanced them against music and combat feedback.</p><ul class="concrete-points"><li><h3>00:25 · Drawing</h3><p>The friction loop follows movement. A turn adds a short accent; pausing the hand stops the loop.</p></li><li><h3>01:09 · Attacks</h3><p>A sweep leads the strike. A delayed paper tear adds texture to its release.</p></li><li><h3>02:00 · Wave complete</h3><p>The game returns to preparation music after the first combat wave.</p></li></ul></div></section>
+ <section class="implementation-intro page-section" id="audio-implementation" aria-labelledby="audio-implementation-title"><p class="eyebrow">Process &amp; implementation</p><h2 id="audio-implementation-title">Audio implementation &amp; Wwise</h2><p class="project-deck">I used pencil friction for drawing and paper tears for creature attacks, then linked those sounds to player input in Unity and Wwise.</p><nav class="implementation-index" aria-label="Implementation topics"><a href="#implementation">Demonstration</a><a href="#pencil">Pencil in Wwise</a><a href="#paper">Paper attack</a><a href="#breathing-room">Mix</a></nav></section>
+ <section class="demo-panel page-section" id="implementation" aria-label="Pencil loop and turn accents"><div class="section-heading"><h2 class="eyebrow">Pencil loop and turn accents</h2><span class="section-count">01:05</span></div>
+ <div class="media-layout story-media"><div class="media-main"><div class="video-frame" id="implementation-player" data-video-id="GC5eDshx94k" data-video-title="Pencil loop and turn accents"><img src="../../assets/huashou/pencil.webp" alt="Pencil loop and turn accents" width="1920" height="1080"><button class="play-button" type="button">▶ Play with sound</button></div>
+ <div class="demo-caption"><span>Pencil loop and turn accents</span><a class="text-link" href="https://www.youtube.com/watch?v=GC5eDshx94k" target="_blank" rel="noopener">Open on YouTube ↗</a></div></div>
+ <aside class="sound-chapters"><h3>Listening index</h3><ol><li><button type="button" data-seek="0" data-player="implementation-player"><time>00:00</time><span>Gameplay</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="24" data-player="implementation-player"><time>00:24</time><span>Friction loop in Wwise</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="31" data-player="implementation-player"><time>00:31</time><span>Turn accents in Wwise</span><span class="chapter-play">↗</span></button></li><li><button type="button" data-seek="42" data-player="implementation-player"><time>00:42</time><span>Return to the game</span><span class="chapter-play">↗</span></button></li></ol></aside></div></section>
+ <section class="story-section page-section" id="pencil"><div class="story-spread"><div class="story-narrative"><header class="story-section-heading"><p class="eyebrow">Drawing interaction</p><h2>One loop, four turn accents.</h2><p class="design-question">The loop needs to continue through a curve without covering the turn accent.</p></header><div class="story-copy"><p>Drawing speed controls the friction layer through Pen_Speed. Direction changes trigger one of four short accents. A second parameter, Pen_Turn, briefly reduces the loop beneath each accent.</p><p>The movement gate stops friction when the hand rests. Release, pause and loss of focus also stop playback.</p></div><button class="text-link gameplay-cue" type="button" data-seek="25" data-player="gameplay-player">Gameplay at 00:25 ↑</button></div><figure class="story-figure ">
+    <a href="../../assets/huashou/pencil.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: A curved black patrol route is being drawn on the notebook while a pink creature is previewed beside it.">
+      <img src="../../assets/huashou/pencil.webp" alt="A curved black patrol route is being drawn on the notebook while a pink creature is previewed beside it." loading="lazy" decoding="async" width="1920" height="1080">
+    </a>
+    <figcaption>Drawing a patrol route in the gameplay recording, 00:25.</figcaption>
+  </figure></div><div class="technique-panel page-section" id="pencil-wwise" role="group" aria-labelledby="pencil-wwise-title">
+    <div class="technique-heading"><h3 id="pencil-wwise-title">A turn makes room for an accent</h3>
+    <p class="eyebrow">Wwise Authoring</p></div>
+    <div class="technique-grid ">
+      <div class="technique-images"><figure class="story-figure source-figure">
+    <a href="../../assets/huashou/pencil-turn.svg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: An accent plays at 0 ms. On a full-strength turn, the requested Pen_Turn reaches 100 at 90 ms, holds to 160 ms and recovers to zero at 320 ms. Wwise maps 0, 50 and 100 to 0, minus 5 and minus 12 dB on the loop.">
+      <img src="../../assets/huashou/pencil-turn.svg" alt="An accent plays at 0 ms. On a full-strength turn, the requested Pen_Turn reaches 100 at 90 ms, holds to 160 ms and recovers to zero at 320 ms. Wwise maps 0, 50 and 100 to 0, minus 5 and minus 12 dB on the loop." loading="eager" decoding="async" width="500" height="270">
+    </a>
+    <figcaption>Unity’s turn envelope and the authored Wwise gain points. The line shows a single full-strength request before Wwise’s 20 ms parameter smoothing.</figcaption>
+  </figure><figure class="story-figure source-figure">
+    <a href="../../assets/huashou/wwise-pencil.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: Wwise Authoring binding on Pencil_Loop, with Voice Volume as the Y axis and Pen_Turn as the X axis.">
+      <img src="../../assets/huashou/wwise-pencil-binding.png" alt="Wwise Authoring binding on Pencil_Loop, with Voice Volume as the Y axis and Pen_Turn as the X axis." loading="eager" decoding="async" width="1292" height="238">
+    </a>
+    <figcaption>Wwise Authoring crop · Pencil_Loop binds Pen_Turn to Voice Volume. Open for the full editor view.</figcaption>
+  </figure></div>
+      <div class="technique-reading">
+        <ol class="technique-steps"><li><span class="step-number">01</span><div><h4>Pencil_Loop + Pen_Speed</h4><p>Unity measures drawing speed and sends Pen_Speed to the pencil hierarchy. A moving stroke keeps one friction loop running. Its level follows the gesture.</p></div></li><li><span class="step-number">02</span><div><h4>Pencil_Turn_Random + Pen_Turn</h4><p>A bend triggers one of four short accents. On a full-strength turn, Unity raises Pen_Turn over 90 ms, holds it until 160 ms and returns it to zero by 320 ms. Wwise uses that value to dip the running loop by up to 12 dB.</p></div></li><li><span class="step-number">03</span><div><h4>Movement gate in Unity</h4><p>The 240 ms interval spaces turn accents. About 45 ms without movement ends the friction so that stopping also has audible meaning.</p></div></li></ol>
+        <p class="technique-listen"><strong>Listen for</strong> Follow the friction through a curve. The accent briefly comes forward, then the friction carries on until the hand pauses.</p>
+
+
+      </div>
+    </div>
+    <details class="making-notes">
+      <summary><span>Inspect the source evidence</span><span class="details-mark" aria-hidden="true"></span></summary>
+      <div class="making-content">
+        <a class="text-link" href="../../assets/huashou/pencil-source.txt" target="_blank" rel="noopener noreferrer">Read the source excerpt <span aria-hidden="true">↗</span></a>
+        <figure class="story-figure source-figure">
+    <a href="../../assets/huashou/pencil-source.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: Unity source excerpt showing movement gating, Pen_Speed and the Play_Pencil_Loop event.">
+      <img src="../../assets/huashou/pencil-source.png" alt="Unity source excerpt showing movement gating, Pen_Speed and the Play_Pencil_Loop event." loading="lazy" decoding="async" >
+    </a>
+    <figcaption>HuashouPencilAudio.cs · Unity passes the drawing gesture to the Wwise events.</figcaption>
+  </figure>
+        <figure class="story-figure source-figure">
+    <a href="../../assets/huashou/wwise-pencil-source.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: Wwise work-unit XML showing Pen_Turn reducing the loop volume from zero to minus twelve decibels.">
+      <img src="../../assets/huashou/wwise-pencil-source.png" alt="Wwise work-unit XML showing Pen_Turn reducing the loop volume from zero to minus twelve decibels." loading="lazy" decoding="async" >
+    </a>
+    <figcaption>Pencil.wwu · The authored Pen_Turn curve reduces the loop by up to 12 dB, leaving room for the turn accent. Actual Wwise work-unit excerpt, typeset with wrapped attributes.</figcaption>
+  </figure><a class="text-link" href="../../assets/huashou/wwise-pencil-source.txt" target="_blank" rel="noopener noreferrer">Read the Wwise excerpt <span aria-hidden="true">↗</span></a>
+      </div></details>
+  </div></section><section class="story-section page-section" id="paper"><div class="story-spread"><div class="story-narrative"><header class="story-section-heading"><p class="eyebrow">Combat sound editing</p><h2>Move the paper tear after the strike.</h2><p class="design-question">The first edit put the tear too close to the sweep’s attack.</p></header><div class="story-copy"><p>I moved the paper layer to 250 ms and 290 ms in the two attack variants. The sweep now marks the hit; the tear supplies a short, fibrous release.</p><p>Both variants use the same 360 ms slice, with a 20 ms fade-in and 70 ms fade-out. The layer is reduced by 8 dB before mixing with the sweep.</p></div><button class="text-link gameplay-cue" type="button" data-seek="69" data-player="gameplay-player">Gameplay at 01:09 ↑</button></div><figure class="story-figure ">
+    <a href="../../assets/huashou/paper-combat.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: Pink drawn creatures fight around the castle while attacks and pickups overlap.">
+      <img src="../../assets/huashou/paper-combat.webp" alt="Pink drawn creatures fight around the castle while attacks and pickups overlap." loading="lazy" decoding="async" width="1920" height="1080">
+    </a>
+    <figcaption>Pink creature attacks in the recorded combat wave, 01:09.</figcaption>
+  </figure></div><div class="technique-panel page-section" id="paper-method" role="group" aria-labelledby="paper-method-title">
+    <div class="technique-heading"><h3 id="paper-method-title">Inside the paper-tail edit</h3>
+    <p class="eyebrow">Sample editing</p></div>
+    <div class="technique-grid ">
+      <div class="technique-images"><figure class="story-figure source-figure">
+    <a href="../../assets/huashou/paper-tail.svg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: The sweep starts at zero. The paper slice follows from 250 to 610 milliseconds in variant one and 290 to 650 in variant two.">
+      <img src="../../assets/huashou/paper-tail.svg" alt="The sweep starts at zero. The paper slice follows from 250 to 610 milliseconds in variant one and 290 to 650 in variant two." loading="lazy" decoding="async" width="500" height="228">
+    </a>
+    <figcaption>Timeline from the paper-tail edit record. The two strips show the same selected slice at two offsets. Darker edges show the authored fades.</figcaption>
+  </figure></div>
+      <div class="technique-reading">
+        <ol class="technique-steps"><li><span class="step-number">01</span><div><h4>Select the material</h4><p>Cut 0.17–0.53 s from the Splice Office Building paper-tear sample. The 360 ms slice supplies the fibrous texture.</p></div></li><li><span class="step-number">02</span><div><h4>Move it into the release</h4><p>Place the slice at 250 ms or 290 ms in the two attack variants. A 20 ms fade-in softens its entry and a 70 ms fade-out clears the tail.</p></div></li><li><span class="step-number">03</span><div><h4>Keep the attack readable</h4><p>The sweep remains the onset. The paper layer sits 8 dB lower than its source and decays through the release.</p></div></li></ol>
+        <p class="technique-listen"><strong>Listen for</strong> At 01:09, listen for the pink creature’s sweep and the dry texture that follows.</p>
+
+
+      </div>
+    </div>
+    <details class="making-notes">
+      <summary><span>Inspect the source evidence</span><span class="details-mark" aria-hidden="true"></span></summary>
+      <div class="making-content">
+        <a class="text-link" href="../../assets/huashou/paper-edit-source.txt" target="_blank" rel="noopener noreferrer">Read the source excerpt <span aria-hidden="true">↗</span></a>
+        <figure class="story-figure source-figure">
+    <a href="../../assets/huashou/paper-edit-source.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: The revision 03-paper-tail editing record, with source selection, fades and variant offsets.">
+      <img src="../../assets/huashou/paper-edit-source.png" alt="The revision 03-paper-tail editing record, with source selection, fades and variant offsets." loading="lazy" decoding="async" width="1600" height="1107">
+    </a>
+    <figcaption>Editing record. The paper layer is an edit for the Unity attack cue.</figcaption>
+  </figure>
+
+      </div></details>
+  </div></section><section class="story-section page-section" id="breathing-room"><div class="story-spread"><div class="story-narrative"><header class="story-section-heading"><p class="eyebrow">Mix and music</p><h2>Change the mix with the player’s task.</h2><p class="design-question">Drawing and combat place different demands on the same mix.</p></header><div class="story-copy"><p>Drawing foregrounds the pencil layer. Summon and danger cues request priority over repeated action sounds. Preparation and combat call separate music cues.</p></div><button class="text-link gameplay-cue" type="button" data-seek="120" data-player="gameplay-player">Gameplay at 02:00 ↑</button></div><figure class="story-figure ">
+    <a href="../../assets/huashou/breathing-room.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image: The first wave has cleared, with surviving pink creatures and a message inviting the player to prepare the next wave.">
+      <img src="../../assets/huashou/breathing-room.webp" alt="The first wave has cleared, with surviving pink creatures and a message inviting the player to prepare the next wave." loading="lazy" decoding="async" width="1920" height="1080">
+    </a>
+    <figcaption>The first wave ends and preparation resumes, 02:00.</figcaption>
+  </figure></div><div class="technique-panel page-section" id="breathing-room-method" role="group" aria-labelledby="breathing-room-method-title">
+    <div class="technique-heading"><h3 id="breathing-room-method-title">The mix behind the change of focus</h3>
+    <p class="eyebrow">Implementation</p></div>
+    <div class="technique-grid technique-text-only">
+
+      <div class="technique-reading">
+        <p>A shared foreground state coordinates the Unity effects and Wwise playback. Drawing, summon-related foreground requests and danger warnings each adjust the surrounding balance. Attack density affects ordinary action sounds; key feedback retains its priority.</p><p>The predominantly 2D mix focuses on material, timing and attention. In the recorded wave flow, preparation and combat call their corresponding music cues.</p>
+
+
+
+      </div>
+    </div>
+
+  </div></section>
+
  <section class="project-reading page-section" id="play"><div class="section-label"><h2>Play the game</h2></div><div class="project-copy"><div class="build-links"><a class="button secondary" href="https://github.com/linnn-nb/portfolio/releases/download/portfolio-2026-11/HuaShou-macOS.zip" download>Download · macOS / Apple Silicon ↗</a></div><p class="capture-note">macOS 12+ · Apple Silicon (M1 or newer). Draw a route in the notebook, summon a creature and start the wave. Keep the application and its contents together after unzipping.</p></div></section><section class="project-reading page-section" id="credits"><div class="section-label"><h2>Roles &amp; sources</h2></div><div class="project-copy"><p>Game design and visual art: Hua Shou team. Sound design, editing and interactive audio: Hu JinLin.</p><p>Pencil and paper textures: Office Building library via Splice. Sweep layers: Fantasy Game 2. I selected, edited, layered and implemented these library recordings.</p><p>Music includes Suno-generated material, selected, edited and integrated by me. The playable version uses a friction loop and turn accents.</p></div></section><nav class="next-project"><a class="all-work" href="../../index.html#work">← All work</a><a class="next-link" href="../../projects/wake-up-tokyo/index.html"><div><span class="eyebrow">Next project</span><span class="next-title">Wake Up Tokyo →</span></div><div class="next-image"><img src="../../assets/tokyo/street.webp" alt="Wake Up Tokyo" loading="lazy"></div></a></nav></article></main>
   <footer class="site-footer shell">
     <span>Hu JinLin · Sound portfolio</span>
